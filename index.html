@@ -466,6 +466,29 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
 .modal .opts a{min-height:66px;text-align:left}.modal .opts a b{display:block;font-weight:500}.modal .opts a small{display:block;font-size:12px;opacity:.75;margin-top:2px}
 @media(max-width:959px){[data-par]{transform:none!important}.mq div{animation-duration:60s}}
 strong{font-weight:500}.t-brown strong,.dep strong,.hero strong,.alert strong{color:#F2EBE0}
+
+/* Instagram */
+.ighead{display:grid;gap:28px;margin-bottom:40px}
+.igacc{display:flex;align-items:center;gap:14px;padding:12px 12px 12px 12px;border:1px solid var(--line);border-radius:6px;background:rgba(255,248,245,.7);color:var(--brown);text-decoration:none;transition:border-color .5s,box-shadow .5s var(--ease),transform .5s var(--ease)}
+.igacc:hover,.igacc:focus-visible{border-color:var(--brown);box-shadow:0 14px 30px rgba(53,34,26,.12);transform:translateY(-2px)}
+.iga{width:52px;height:52px;border-radius:50%;background:var(--brown);display:grid;place-items:center;flex:none;box-shadow:0 0 0 2px #FFEEEE,0 0 0 3.5px var(--sand)}
+.iga img{width:20px}
+.igt{flex:1;display:grid;line-height:1.3}.igt b{font-weight:500;font-size:15px}.igt small{font-size:12px;color:var(--soft)}
+.igb{flex:none;background:var(--brown);color:var(--cream);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;border-radius:4px;transition:background .4s}
+.igacc:hover .igb{background:#5E4538}
+.iggrid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.igp{position:relative;display:block;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#E6D7CA;color:#F2EBE0;text-decoration:none}
+.igp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.igo{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:14px;background:linear-gradient(180deg,rgba(42,26,19,0) 40%,rgba(42,26,19,.8));transition:background .6s var(--ease)}
+.igi{position:absolute;top:12px;right:12px;width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(42,26,19,.35);backdrop-filter:blur(6px)}
+.igi svg{width:16px;height:16px}
+.igo b{font:400 17px/1.2 var(--serif)}
+.igo small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s var(--ease)}
+.igp:hover img,.igp:focus-visible img{transform:scale(1.07)}
+.igp:hover .igo,.igp:focus-visible .igo{background:linear-gradient(180deg,rgba(42,26,19,.25),rgba(42,26,19,.85))}
+.igp:hover small,.igp:focus-visible small{opacity:.9;transform:none}
+@media(hover:none){.igo small{opacity:.85;transform:none}}
+@media(min-width:960px){.ighead{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:60px;margin-bottom:48px}.igacc{min-width:400px}.iggrid{grid-template-columns:repeat(3,1fr);gap:14px}.igo{padding:22px}.igo b{font-size:21px}}
 </style>
 </head>
 <body>
@@ -815,6 +838,30 @@ strong{font-weight:500}.t-brown strong,.dep strong,.hero strong,.alert strong{co
   </div>
 </section>
 
+<section class="band t-pink" id="instagram">
+  <div class="wrap">
+    <div class="ighead">
+      <div>
+        <p class="kicker rv">Instagram</p>
+        <h2 class="rv" style="--d:1">Informação sobre pele, <em>todos os dias.</em></h2>
+      </div>
+      <a class="igacc rv" style="--d:2" href="https://www.instagram.com/dermatofrancodandrea/" target="_blank" rel="noopener">
+        <span class="iga"><img src="img/icone-cream.png" alt="" width="22" height="24"></span>
+        <span class="igt"><b>@dermatofrancodandrea</b><small>Dermatologia e cirurgia de Mohs</small></span>
+        <span class="igb">Seguir</span>
+      </a>
+    </div>
+    <ul class="iggrid">
+      <li class="rv" style="--d:0"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="0" target="_blank" rel="noopener"><img src="img/franco-consultorio-720.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>Quem é o Dr. Franco</b><small>Ver no Instagram</small></span></a></li>
+      <li class="rv" style="--d:1"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="1" target="_blank" rel="noopener"><img src="img/skin.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>Câncer de pele: sinais de alerta</b><small>Ver no Instagram</small></span></a></li>
+      <li class="rv" style="--d:2"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="2" target="_blank" rel="noopener"><img src="img/camada-3.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>Autoexame da pele</b><small>Ver no Instagram</small></span></a></li>
+      <li class="rv" style="--d:0"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="3" target="_blank" rel="noopener"><img src="img/dropper.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>Protetor solar no dia a dia</b><small>Ver no Instagram</small></span></a></li>
+      <li class="rv" style="--d:1"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="4" target="_blank" rel="noopener"><img src="img/franco-jaleco-720.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>O que é a cirurgia de Mohs</b><small>Ver no Instagram</small></span></a></li>
+      <li class="rv" style="--d:2"><a class="igp" href="https://www.instagram.com/dermatofrancodandrea/" data-post="5" target="_blank" rel="noopener"><img src="img/cream.webp" alt="" loading="lazy" decoding="async"><span class="igo"><span class="igi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span><b>Cuidados com a cicatriz</b><small>Ver no Instagram</small></span></a></li>
+    </ul>
+  </div>
+</section>
+
 <section class="band t-cream final">
   <div class="bgimg" aria-hidden="true"><img data-par=".1" src="img/silk.webp" alt="" loading="lazy" decoding="async"></div>
   <div class="wrap">
@@ -995,6 +1042,12 @@ document.querySelectorAll(sel).forEach(fix)})();
     loop('track', 'dots', 'cprev', 'cnext', 26);
     loop('dtrack', 'ddots', 'dprev', 'dnext', 22);
   }
+
+/* EDITAR AQUI: link de cada post (na ordem dos cards). Vazio = abre o perfil. */
+{
+  const POSTS = ['', '', '', '', '', ''];
+  document.querySelectorAll('.igp[data-post]').forEach(a => { const u = POSTS[+a.dataset.post]; if (u) a.href = u; });
+}
 </script>
 </body>
 </html>
