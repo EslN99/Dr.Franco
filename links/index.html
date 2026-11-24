@@ -78,6 +78,13 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
 .city.alt:hover,.city.alt:focus-visible{color:var(--cream);border-color:var(--brown)}
 .city.alt .ic{background:none}
 .t small{opacity:.85}
+.dep{width:100%;margin-bottom:8px}
+.dtrack{list-style:none;margin:0;padding:2px 0 6px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;cursor:grab;touch-action:pan-x pan-y;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.dtrack::-webkit-scrollbar{display:none}.dtrack.drag{cursor:grabbing;user-select:none}
+.dtrack li{flex:0 0 78%;display:flex;flex-direction:column;gap:10px;padding:22px 20px 18px;border:1px solid var(--line);border-radius:6px;background:rgba(255,248,245,.75);text-align:left}
+.dtrack .qm{font:400 46px/.5 var(--serif);color:var(--sand);height:16px}
+.dtrack blockquote{margin:0;font:400 17px/1.4 var(--serif);flex:1}
+.dtrack small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
 </style>
 </head>
 <body>
@@ -103,6 +110,19 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
     <a class="b rv" style="--d:8" data-link="medicos" href="#"><span class="ic"><svg viewBox="3 -1 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 3v5a4 4 0 0 0 8 0V3M12 12v3a4 4 0 0 0 8 0v-2"/><circle cx="20" cy="11" r="2"/></svg></span><span class="t"><b>Para médicos</b><small>Encaminhe um paciente</small></span><span class="arr">→</span></a>
   </nav>
 
+  <p class="lbl rv" style="--d:8">Mais de 80 avaliações</p>
+  <div class="dep rv" style="--d:8" aria-label="Depoimentos de pacientes">
+    <ul class="dtrack" id="dtrack">
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Adorei minha consulta, me senti acolhida e ouvida!</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Me sinto confiante em estar sendo acompanhada por ele.</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Dr Franco é muito gentil e explica o tratamento com paciência e tem a mão bem leve, fazendo parecer doer menos.</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Buscou informações para adequar o meu tratamento dada a minha condição médica (imunossuprimido).</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Muito atencioso, explicando detalhadamente cada passo de seu procedimento; transmitindo segurança ao paciente.</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Dr Franco é pessoa com grande conhecimento técnico, e com muita vivência no hospital do câncer.</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Médico pontual e muito atencioso. Explicou em detalhes sobre minhas dúvidas.</blockquote><small>Paciente</small></li>
+      <li><span class="qm" aria-hidden="true">“</span><blockquote>Desde o momento em que entrei na clínica, fui super bem atendido por toda a equipe.</blockquote><small>Paciente</small></li>
+    </ul>
+  </div>
   <div class="foot rv" style="--d:9"><img src="img/logo.png" alt="Franco D'Andrea" width="160" height="14"><span>Dermatologia, Estética e Cirurgia Oncológica</span></div>
 </main>
 
@@ -112,9 +132,9 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
 {
   /* EDITAR AQUI: WhatsApp de cada secretária (DDI + DDD + número, só dígitos) */
   const CIDADES = {
-    sjc: { whats: '5512900000001', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São José dos Campos.' },
-    sp:  { whats: '5511900000002', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São Paulo.' },
-    rp:  { whats: '5517900000003', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São José do Rio Preto.' }
+    sjc: { whats: '5512900000001', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São José dos Campos. (via Instagram)' },
+    sp:  { whats: '5511900000002', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São Paulo. (via Instagram)' },
+    rp:  { whats: '5517900000003', msg: 'Olá! Vim pelo Instagram e gostaria de agendar uma consulta com o Dr. Franco em São José do Rio Preto. (via Instagram)' }
   };
   /* EDITAR AQUI: demais links */
   const SITE = 'https://esln99.github.io/Dr.Franco/';
@@ -122,8 +142,8 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
   const LINKS = {
     site: SITE + UTM,
     mohs: SITE + UTM + '#mohs',
-    instagram: 'https://www.instagram.com/dr.francopdandrea/',
-    medicos: 'https://wa.me/' + CIDADES.sjc.whats + '?text=' + encodeURIComponent('Olá, Dr. Franco! Sou médico(a) e gostaria de encaminhar um paciente para cirurgia de Mohs.')
+    instagram: 'https://www.instagram.com/dermatofrancodandrea/',
+    medicos: 'https://wa.me/' + CIDADES.sjc.whats + '?text=' + encodeURIComponent('Olá, Dr. Franco! Sou médico(a) e gostaria de encaminhar um paciente para cirurgia de Mohs. (via Instagram)')
   };
   const ext = a => { a.target = '_blank'; a.rel = 'noopener'; };
   document.querySelectorAll('[data-city]').forEach(a => {
@@ -138,6 +158,28 @@ p,li,blockquote,h1,h2,h3,h4,figcaption,summary{text-wrap:pretty}h1,h2,h3{text-wr
 function fix(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}
 if(!last)return;var t=last.nodeValue,m=t.match(/^([\s\S]*\S)\s+(\S+)(\s*)$/);if(m&&m[1].split(/\s+/).length>=1&&t.trim().split(/\s+/).length>2){last.nodeValue=m[1]+'\u00A0'+m[2]+m[3]}}
 document.querySelectorAll(sel).forEach(fix)})();
+
+{
+  /* Depoimentos: autoplay contínuo, infinito e com arraste */
+  const track = document.getElementById('dtrack'), orig = [...track.children], N = orig.length;
+  const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  [0,1].forEach(() => orig.forEach(el => { const c = el.cloneNode(true); c.setAttribute('aria-hidden','true'); track.appendChild(c); }));
+  const all = [...track.children], step = () => all[1].offsetLeft - all[0].offsetLeft, setW = () => step() * N;
+  let pos = 0, hold = false, hover = false, last = performance.now(), sx = 0, sp = 0;
+  const wrap = () => { const w = setW(); while (pos >= 2 * w) pos -= w; while (pos < w) pos += w; };
+  const apply = () => { wrap(); track.scrollLeft = pos; };
+  track.addEventListener('mouseenter', () => hover = true);
+  track.addEventListener('mouseleave', () => hover = false);
+  track.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; hold = true; sx = e.clientX; sp = pos; track.classList.add('drag'); });
+  addEventListener('pointermove', e => { if (hold && e.pointerType === 'mouse') { pos = sp - (e.clientX - sx); apply(); } });
+  addEventListener('pointerup', () => { hold = false; track.classList.remove('drag'); });
+  track.addEventListener('touchstart', () => hold = true, {passive:true});
+  track.addEventListener('touchend', () => setTimeout(() => { pos = track.scrollLeft; hold = false; }, 900), {passive:true});
+  track.addEventListener('scroll', () => { if (hold) { pos = track.scrollLeft; const w = setW(); if (pos < w * .5 || pos >= w * 1.5) apply(); } }, {passive:true});
+  addEventListener('resize', () => { pos = setW(); apply(); });
+  const frame = now => { const dt = Math.min(64, now - last) / 1000; last = now; if (!hold && !hover && !reduce) { pos += 22 * dt; apply(); } requestAnimationFrame(frame); };
+  requestAnimationFrame(() => { pos = setW(); apply(); requestAnimationFrame(frame); });
+}
 </script>
 </body>
 </html>
